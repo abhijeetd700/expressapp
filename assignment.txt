@@ -1,0 +1,63 @@
+1) Create a Hobby Model. 
+the hobby model has following fields:
+name(string), description(string), type(string)
+Note: Name can be max 30 characters, description max is 200 characters and type max is 20 characters. 
+
+2) create a Router called hobby. 
+3) create API to create a hobby, edit a hobby, delete a hobby and show all hobbies.
+
+15_Jan
+
+1)you have to create a forum API
+
+forum : title(min 10 characters and max 100), doc(data of creation),forumbody(min 50 characters and max 500),
+author(only alpha numberis, min length=5, max length 50)
+
+you have to create a model, create a route and a controller. 
+
+yes, create a separate route. 
+
+localhost:4000/forum --> post request 
+You have to to get all forums. 
+url should be localhost:4000/forum --> get request
+
+You have to to get one forum with particular id
+url should be localhost:4000/forum/:id --> get request 
+
+you have to edit the forum
+url should be localhost:4000/forum/:id --> put request 
+Note: implement same validation as u did for creating a forum
+
+you have to delete the forum
+url should be localhost:4000/forum/:id --> delete request 
+
+
+2)you have to create a forum replies API
+in every forum ppl can reply. 
+fields are 
+1) title(min 10 characters and max 50), doc(data of creation),replybody(min 50 characters and max 500),
+author(only alpha numberis, min length=5, max length 50), forumId(id of forum, only numbers allowed.find function to only check for numbers)
+
+
+you have to create a model, create a route and a controller. 
+
+yes, create a separate route. 
+
+create only create api.
+means post url localhost:4000/reply to create a reply. 
+
+dont create get, put and delete api
+
+29_Jan
+
+1) you have added authentiation to users controller. But you have not implemented the validation . 
+wo while you are registering a user you have to do the following
+ email should not exist before
+ email id should not be emptry and should  be in proper format(use express validator)
+ password should not be empty and should be min 3 characters and max 50 characters(validate in controller)
+ age should be between 18 and 120
+ name should not be empty and should be min 3 characters and max 100 characters
+
+2) create a user registration API where you can send username,email,name, password and profile pic. 
+ create the post api to register. 
+ create a get api to fetch all details including photo.
