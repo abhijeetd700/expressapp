@@ -1,5 +1,4 @@
-// Comment added in remote repo
-// 2nd comment in remote repo
+// First line comment
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -73,5 +72,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
+// Comment added in remote repo
 module.exports = app;
